@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "math.h"
 void test_linked_list_simple() {
 	Groceries g;
 	g.init();
@@ -41,22 +41,43 @@ void test_linked_list_simple() {
 void test_linked_list_complex() {
 	Trip t;
 	t.init();
-	t.insertLocation(51.112676, 5.555555);
-	t.insertLocation(53.112676, 5.555555);
-	t.insertLocation(23.112676, 5.555555);
-	t.insertLocation(12.112676, 5.555555);
-	t.insertLocation(45.112676, 5.555555);
-	t.insertLocation(57.112676, 5.555555);
-	t.insertLocation(123.112676, 5.555555);
-	t.insertLocation(43.112676, 5.555555);
+	t.insertLocation(51.112676, 12.555555, "a");
+	t.insertLocation(53.112676, 32.555555, "a");
+	t.insertLocation(23.112676, 43.555555, "c");
+	t.insertLocation(12.112676, 125.555555, "c");
+	t.insertLocation(45.112676, 87.555555, "b");
+	t.insertLocation(57.112676, 31.555555, "d");
+	t.insertLocation(123.112676, 93.555555, "b");
+	t.insertLocation(43.112676, 45.555555, "b");
+	t.show();
+	t.deleteByName("d");
+	t.show();
+	t.deleteByName("a");
+	t.show();
+	t.deleteByName("c");
+	t.show();
+	t.deleteByName("b");
 	t.show();
 }
 
+bool CubeRoot(int x) {
+	if (cbrt(x) == int(cbrt(x))) return true;
+	return false;
+}
+
+int solution(int a, int b) {
+	int res = 0;
+	for (int i = a; i < b; i++) {
+		if (CubeRoot(i)) res++;
+	}
+	return res;
+}
 
 int main() {
 	
 	//test_linked_list_simple();
-	test_linked_list_complex();
+	//test_linked_list_complex();
+	cout << solution(8,1000000);
 	system("pause");
 	return 0;
 }

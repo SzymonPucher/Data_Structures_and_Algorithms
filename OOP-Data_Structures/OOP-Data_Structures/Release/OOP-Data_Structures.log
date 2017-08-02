@@ -1,7 +1,19 @@
-﻿  Linked_list-two_way_cycled_ordered_with_sentinel.cpp
+﻿  main.cpp
+main.cpp(16): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(17): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(18): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(19): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(20): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(21): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(22): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(23): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(24): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(25): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(26): warning C4305: "argument": obcięcie z "double" do "float"
+main.cpp(27): warning C4305: "argument": obcięcie z "double" do "float"
   Trwa generowanie kodu
-  1 of 54 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
+  2 of 9 functions (22.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   OOP-Data_Structures.vcxproj -> C:\Users\Szymon Pucher\Dysk Google\Pliki Google Drive\Studia\Git\PWr\OOP-Data_Structures\Release\OOP-Data_Structures.exe

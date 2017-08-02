@@ -2,9 +2,10 @@
 
 
 Location::Location(){}
-Location::Location(double lon, double lat){
+Location::Location(double lon, double lat, string name){
 	this->longitude = lon;
 	this->latitude = lat;
+	this->name = name;
 }
 Location::~Location(){}
 // SETTES
@@ -16,12 +17,20 @@ bool Location::setLatitude(double lat) {
 	this->latitude = lat;
 	return true;
 }
+bool Location::setName(string name){
+	this->name = name;
+	return true;
+}
 // GETTERS
 double Location::getLongitude() {
 	return longitude;
 }
 double Location::getLatitude() {
 	return latitude;
+}
+
+string Location::getName(){
+	return name;
 }
 
 
@@ -45,12 +54,12 @@ void Trip::init() {
 	sentinel->next = sentinel->prev = sentinel;
 }
 
-bool Trip::insertLocation(double lon, double lat) { 
+bool Trip::insertLocation(double lon, double lat, string name) { 
 	// inserts element in in right place in list
 	Location *newLoc = new Location;
 	newLoc->setLongitude(lon);
 	newLoc->setLatitude(lat);
-	
+	newLoc->setName(name);
 	if (sentinel->next == sentinel) { 
 		// if list is empty
 		newLoc->next = newLoc->prev = sentinel;
@@ -92,7 +101,6 @@ bool Trip::insertLocation(double lon, double lat) {
 	}
 	newLoc->next->prev = newLoc;
 	newLoc->prev->next = newLoc;
-	show();
 	return true;
 }
 void Trip::showLocation(Location *l) { 
@@ -113,4 +121,18 @@ void Trip::show() { // shows all elements of list
 double Trip::distanceBetweenLocations(Location *l1, Location *l2) { 
 	// measures distance in straight line between locations based on geografical coordinates
 	return sqrt(pow(l1->getLatitude() - l2->getLatitude(), 2) + pow(l1->getLongitude() - l2->getLongitude(), 2));
+}
+bool Trip::deleteLocation(Location *p) {
+	p->next->prev = p->prev;
+	p->prev->next = p->next;
+	delete p;
+}
+
+bool Trip::deleteByName(string name) {
+	Location *srch = sentinel->next;
+	while (srch != sentinel) {
+		if (srch->getName() == name)
+			deleteLocation(srch);
+		srch = srch->next;
+	}
 }
