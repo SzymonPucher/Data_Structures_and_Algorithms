@@ -1,4 +1,0 @@
-﻿  Linked_list-simple.cpp
-c:\users\szymon pucher\dysk google\pliki google drive\studia\git\pwr\oop-data_structures\oop-data_structures\linked_list-simple.cpp(24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\szymon pucher\dysk google\pliki google drive\studia\git\pwr\oop-data_structures\oop-data_structures\linked_list-simple.cpp(46): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-LINK : fatal error LNK1168: nie można otworzyć pliku C:\Users\Szymon Pucher\Dysk Google\Pliki Google Drive\Studia\Git\PWr\OOP-Data_Structures\Debug\OOP-Data_Structures.exe do zapisu
